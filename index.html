@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Drohnenkarte Österreich</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="map" aria-label="Karte"></div>
+
+  <form id="search" role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Adresse suchen …" aria-label="Adresse suchen" />
+    <button type="submit">Suchen</button>
+  </form>
+
+  <section id="layers" aria-label="Ebenen">
+    <h2>Ebenen</h2>
+    <label><input type="checkbox" id="t-airspace" checked /> <span class="sw sw-air"></span> Luftraum <small id="s-airspace"></small></label>
+    <label><input type="checkbox" id="t-environment" checked /> <span class="sw sw-env"></span> Schutzgebiete <small id="s-environment"></small></label>
+  </section>
+
+  <div id="banner" hidden></div>
+
+  <aside id="result" hidden aria-live="polite">
+    <button id="result-close" aria-label="Schließen">×</button>
+    <div id="result-body"></div>
+  </aside>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
